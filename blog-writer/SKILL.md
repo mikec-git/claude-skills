@@ -1,6 +1,6 @@
 ---
 name: blog-writer
-description: Helps write, review, and revise blog posts through a conversational workflow. Use when writing new posts, reviewing or editing existing content, or improving articles. Triggers include "help me write about...", "review my blog", "take a look at my blog", "make this/it better", "revise my post", "improve my blog", or any request to check, polish, or give feedback on blog content.
+description: Helps write, review, and revise blog posts through a conversational workflow. MUST be invoked for ANY request involving blog content - writing, reviewing, editing, improving, or getting feedback. Trigger phrases: "help me write about", "review my blog", "take a look at my blog", "make this/it better", "revise my post", "improve my blog", "see if there's anything you could revise", "check my blog", "feedback on my blog", or any variation asking to write, review, polish, or improve blog/article/post content.
 ---
 
 # Blog Writer
@@ -117,11 +117,16 @@ Ask the user what type of improvements they want:
 
 - "Review my blog post"
 - "Take a look at my blog and suggest improvements"
+- "Can you take a look at my blog..."
 - "Can you revise this post?"
 - "Make my blog post better"
 - "Edit my article"
 - "What could I improve in this post?"
 - "See if there's anything you could revise"
+- "See if there's anything to improve"
+- "Give me feedback on my post"
+- "How can I make this post better?"
+- "What would you change about this article?"
 
 ## Important
 
