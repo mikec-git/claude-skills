@@ -7,6 +7,14 @@ description: Creates new Claude Code skills with proper structure and best pract
 
 A meta-skill for creating well-structured Claude Code skills.
 
+## Thinking Budget
+
+Use **UltraThink** (maximum thinking budget) automatically when:
+- Designing skill architecture and structure
+- Brainstorming template options or enhancements
+- Analyzing user requirements to infer skill purpose
+- Generating creative trigger phrases and descriptions
+
 ## Mode Selection
 
 Ask the user which mode they prefer:
@@ -83,6 +91,14 @@ When the user provides a description like "I want a skill that reviews my SQL qu
 - One primary task per skill
 - If a skill does multiple things, consider splitting it
 - Keep SKILL.md under 500 lines
+
+### UltraThink for Creative Skills
+
+When generating skills that involve deep thinking, brainstorming, or creative work, include a Thinking Budget section instructing Claude to use UltraThink automatically. Examples of skills that need this:
+- Content generation (writing, documentation)
+- Design and architecture planning
+- Brainstorming or ideation
+- Complex analysis or review tasks
 
 ---
 

@@ -7,6 +7,14 @@ description: Helps write, review, and revise blog posts through a conversational
 
 A conversational blog writing assistant that gathers context before drafting, produces outlines for approval, and writes section by section with a consistent casual voice.
 
+## Thinking Budget
+
+Use **UltraThink** (maximum thinking budget) automatically when:
+- Brainstorming content angles and approaches
+- Designing post structure and outlines
+- Generating creative titles and hooks
+- Analyzing existing posts for improvements
+
 ## Before Starting
 
 Read the style guide at `~/.claude/skills/blog-writer/STYLE.md` and follow it throughout the writing process.
