@@ -9,6 +9,8 @@ Create production-quality frontend interfaces that feel crafted and intentional.
 
 ## Workflow
 
+**CRITICAL: Step 0.5 (Planning) is MANDATORY for all frontend work. You must invoke the planner skill before writing any code, even if requirements are specific and detailed.**
+
 ### 0. Handle Vague Requests (Discovery Mode)
 
 When the user's request is broad or ambiguous (e.g., "I want to build a frontend", "help me with the UI", "make my app look better"), you must gather requirements before proceeding.
@@ -72,34 +74,53 @@ Visual Direction:
 - Key references: [if provided]
 ```
 
-### 0.5 Council Review
+### 0.5 Create Implementation Plan (MANDATORY)
 
-After creating the implementation plan, invoke the LLM Council to review it before presenting to the user.
+**IMPORTANT: This step is REQUIRED for ALL frontend work, regardless of whether requirements are vague or specific.** Even when the user provides detailed specifications, comprehensive planning ensures design quality, catches blind spots, and validates the approach.
 
-**Invoke the council-chairman agent with:**
+Before writing any code, spawn the **planner sub-agent** to create a comprehensive implementation plan.
+
+**Use the Task tool with `subagent_type: planner`:**
 
 ```
-Review this frontend implementation plan for [project name/description]:
+Create a frontend implementation plan.
 
-[Full implementation plan from discovery]
+Goal: [What we're building]
 
-Evaluate:
-1. Does the build order make sense for this type of project?
-2. Are there missing pages/components that users would expect?
-3. Is the tech stack appropriate for the requirements?
-4. Are there UX patterns or flows that should be considered?
-5. Any potential pitfalls or risks with this approach?
+Context from user:
+[User requirements from discovery or specific request]
 
-Provide specific, actionable feedback to improve the plan.
+Components/pages to build:
+[List of components]
+
+Tech stack:
+[Framework, styling, libraries]
+
+Design direction:
+[Colors, typography, layout approach]
+
+Focus the plan on:
+1. Identifying all constraints (technical, accessibility, performance)
+2. Analyzing tradeoffs between approaches (component structure, styling patterns)
+3. Defining clear implementation steps with verification criteria
+4. Assessing risks (browser compatibility, responsive edge cases, accessibility gaps)
+
+Return a structured plan with:
+- Constraints (hard/soft/assumptions)
+- Key tradeoffs and recommendations
+- Ordered implementation steps with verification criteria
+- Risk assessment
 ```
 
-**After council review:**
+The planner sub-agent will explore the codebase, analyze constraints, and return a comprehensive plan. This keeps planning context isolated from the main conversation.
 
-1. Incorporate relevant feedback into the plan
-2. Note any dissenting opinions that might be worth mentioning to the user
-3. Present the refined plan to the user for approval
+**After receiving the plan:**
 
-Present this plan to the user for approval before building. Adjust based on feedback.
+1. Review it for completeness
+2. For complex tradeoffs, spawn `council-chairman` sub-agent for multi-perspective review
+3. Present the plan to the user for approval
+
+**Do NOT skip this step.** Present the plan to the user for approval before building.
 
 ### 1. Detect Tech Stack
 
