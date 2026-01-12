@@ -1,6 +1,6 @@
 ---
 name: backend-expert
-description: Design and build production-grade backend systems including APIs, databases, authentication, queues, and caching. Use when the user asks to build APIs, create backend services, design database schemas, implement authentication, set up message queues, or architect server-side systems. Handles vague requests like "build a backend" or "create an API" by gathering requirements and creating implementation plans.
+description: Design and build production-grade backend systems including APIs, databases, authentication, queues, and caching. Use when the user asks to build, create, update, modify, or improve APIs, backend services, database schemas, authentication, message queues, or server-side systems. Also use for requests to add features to APIs, refactor backend code, fix backend issues, or enhance server-side functionality. Handles vague requests like "build a backend" or "create an API" by gathering requirements and creating implementation plans.
 ---
 
 # Backend Development Expert
