@@ -72,6 +72,33 @@ Visual Direction:
 - Key references: [if provided]
 ```
 
+### 0.5 Council Review
+
+After creating the implementation plan, invoke the LLM Council to review it before presenting to the user.
+
+**Invoke the council-chairman agent with:**
+
+```
+Review this frontend implementation plan for [project name/description]:
+
+[Full implementation plan from discovery]
+
+Evaluate:
+1. Does the build order make sense for this type of project?
+2. Are there missing pages/components that users would expect?
+3. Is the tech stack appropriate for the requirements?
+4. Are there UX patterns or flows that should be considered?
+5. Any potential pitfalls or risks with this approach?
+
+Provide specific, actionable feedback to improve the plan.
+```
+
+**After council review:**
+
+1. Incorporate relevant feedback into the plan
+2. Note any dissenting opinions that might be worth mentioning to the user
+3. Present the refined plan to the user for approval
+
 Present this plan to the user for approval before building. Adjust based on feedback.
 
 ### 1. Detect Tech Stack
