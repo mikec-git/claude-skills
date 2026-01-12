@@ -1,0 +1,77 @@
+# Terminology Configuration for check_terminology.py
+#
+# This file allows domain-specific customization of terminology checks.
+# Place a copy of this file (or a minimal version) alongside your skill
+# to override defaults or add domain-specific terms.
+
+# Version for compatibility checking
+version: "1.0"
+
+# Domain-specific abbreviations
+# Format: abbreviation: expansion
+# These are checked IN ADDITION to the built-in abbreviations
+domain_abbreviations:
+  # AI/ML domain
+  llm: "large language model"
+  llms: "large language models"
+  rag: "retrieval-augmented generation"
+  ml: "machine learning"
+  ai: "artificial intelligence"
+  nlp: "natural language processing"
+  gpt: "generative pre-trained transformer"
+
+  # Kubernetes/Cloud
+  k8s: "kubernetes"
+  k3s: "kubernetes"
+  eks: "elastic kubernetes service"
+  gke: "google kubernetes engine"
+  aks: "azure kubernetes service"
+
+  # DevOps
+  ci: "continuous integration"
+  cd: "continuous deployment"
+  cicd: "continuous integration continuous deployment"
+
+  # Claude Code specific
+  mcp: "model context protocol"
+
+# Compound terms that should be treated as equivalent
+# Format: normalized_form: [variants]
+# The first form in the list is the "canonical" form
+compound_equivalents:
+  - ["file path", "filepath", "file-path"]
+  - ["sub-agent", "subagent", "sub agent"]
+  - ["pre-process", "preprocess", "pre process"]
+  - ["multi-step", "multistep", "multi step"]
+  - ["code block", "codeblock", "code-block"]
+  - ["front matter", "frontmatter", "front-matter"]
+  - ["back end", "backend", "back-end"]
+  - ["front end", "frontend", "front-end"]
+  - ["end point", "endpoint", "end-point"]
+  - ["time stamp", "timestamp", "time-stamp"]
+  - ["user name", "username", "user-name"]
+  - ["work flow", "workflow", "work-flow"]
+  - ["check list", "checklist", "check-list"]
+  - ["name space", "namespace", "name-space"]
+  - ["white space", "whitespace", "white-space"]
+
+# Terms to ignore during consistency checks
+# Use for intentionally variant terms or proper nouns
+ignore_terms:
+  - "JavaScript" # Proper capitalization
+  - "TypeScript"
+  - "GitHub"
+  - "GitLab"
+  - "macOS"
+  - "iOS"
+
+# Severity overrides for specific reason types
+# Options: error, warning, info
+severity_overrides:
+  case_variation: "warning"
+  abbreviation: "warning"
+  stem_variation: "info"
+  hyphenation_variant: "warning"
+  compound_variant: "warning"
+  levenshtein_distance_1: "warning"
+  levenshtein_distance_2: "info"
