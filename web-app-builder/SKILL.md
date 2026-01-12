@@ -1,6 +1,6 @@
 ---
 name: web-app-builder
-description: Build complete web applications by orchestrating frontend and backend development with integrated quality reviews. Use when the user asks to build a web app, create a full-stack application, build a website with backend, or develop a complete web project. Coordinates frontend-designer and backend-expert skills with LLM Council reviews at each stage.
+description: Build NEW web applications from scratch with both frontend and backend. Use when the user asks to build, create, or develop a web app, full-stack application, or complete web project - including vague requests like "build me an app" where requirements are unclear. NOT for existing app modifications, frontend-only, backend-only, mobile apps, or desktop apps.
 ---
 
 # Web App Builder
