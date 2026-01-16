@@ -1,5 +1,5 @@
 ---
-name: frontend-designer
+name: frontend-expert
 description: Create distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build, create, update, modify, or redesign web components, pages, or applications. Also use for requests to improve, fix, or tweak UI styling, layout, colors, spacing, or visual appearance. Handles frontend/UI design work including style changes, responsive fixes, and visual improvements. Handles vague requests like "build a frontend", "help with the UI", or "make it look better" by gathering requirements and creating implementation plans. Generates creative, polished code with intentional design choices.
 ---
 
